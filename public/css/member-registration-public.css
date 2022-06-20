@@ -1,0 +1,122 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+ div#member_registration_form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+div#member_registration_form form .forminput {
+    display: flex;
+    flex-direction: column;
+}
+div#member_registration_form form .forminput .name_field {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+div#member_registration_form form .forminput .name_field > div {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+div#member_registration_form form .forminput input[type="text"], div#member_registration_form form .forminput input[type="url"], div#member_registration_form form .forminput input[type="number"], div#member_registration_form form .forminput input[type="email"], div#member_registration_form form .forminput select {
+    all: unset;
+    border: 1px solid #ddd;
+    max-height: 40px;
+    padding: 6px 10px;
+    border-radius: 3px;
+    background-color: white;
+}
+div#member_registration_form form .forminput textarea{
+    all: unset;
+    border: 1px solid #ddd;
+    max-height: 40px;
+    padding: 8px 10px;
+    border-radius: 3px;
+    background-color: white;
+    min-height: 100px !important;
+}
+div#member_registration_form form .forminput input[type="text"]:focus, div#member_registration_form form .forminput input[type="url"]:focus, div#member_registration_form form .forminput input[type="number"]:focus, div#member_registration_form form .forminput input[type="email"]:focus, div#member_registration_form form .forminput select:focus, div#member_registration_form form .forminput textarea:focus{
+    border-color: #8f8f8f;
+}
+
+div#member_registration_form form .forminput .flabel {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+div#member_registration_form form .forminput .checkboxes {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+div#member_registration_form form .forminput .checkboxes input {
+    width: 18px;
+    height: 18px;
+}
+div#member_registration_form form .forminput .checkboxes li {
+    margin-bottom: 1px;
+}
+div#member_registration_form form .forminput .checkboxes li label {
+    width: fit-content;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+div#member_registration_form form .forminput .captchabox {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+div#member_registration_form form .forminput .captchabox p{
+    margin: 0;
+    font-size: 16px;
+}
+div#member_registration_form form .forminput .captchabox input {
+    max-width: 100px;
+}
+input[name="mrform_submit"] {
+    all: unset;
+    padding: 5px 15px;
+    background-color: #ddd;
+    color: #333;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border: .1px solid #cfcfcf;
+}
+input[name="mrform_submit"]:hover {
+    background-color: #cfcfcf;
+    color: #333;
+    border-color: #ddd;
+}
+
+.mr_alert {
+    padding: 5px 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.mr_alert p{
+    margin: 0;
+}
+.mr_alert.error{
+    border-left: 4px solid red;
+    background: #ff000008;
+}
+.mr_alert.success {
+    border-left: 4px solid #00bcd4;
+    background: #03a9f412;
+}
+
+@media screen and (max-width: 768px) {
+    div#member_registration_form form .forminput input[type="text"],div#member_registration_form form .forminput input[type="url"], div#member_registration_form form .forminput input[type="number"], div#member_registration_form form .forminput input[type="email"], div#member_registration_form form .forminput select, div#member_registration_form form .forminput .name_field{
+        max-width: 100%;
+    }
+    div#member_registration_form form .forminput .name_field > div > input{
+        min-width: auto !important;
+    }
+}
